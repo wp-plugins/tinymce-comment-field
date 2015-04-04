@@ -24,6 +24,7 @@ class TMCECF_EditorController {
         global $wp_styles;
 
         $content_css = get_option("tinymce-comment-field_css-url");
+        $height = $titan->getOption('height');
 
         foreach ($wp_styles->registered as $wp_style):
             if ("tf-google-webfont" === substr($wp_style->handle, 0, 17)):
@@ -43,6 +44,7 @@ class TMCECF_EditorController {
             'quicktags' => false,
             'media_buttons' => false,
             'tinymce' => array(
+                 'height' => $height,
                 'directionality' => $text_direction, 'content_css' => $content_css)
         ));
         $comment_editor = ob_get_contents();

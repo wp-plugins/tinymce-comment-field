@@ -64,6 +64,19 @@ class TMCECF_TitanController {
         ));
 
         $general_tab->createOption(array(
+            'name' => _("Height"),
+            'id' => 'height',
+            'type' => 'number',
+            'desc' => '',
+            'default' => '200',
+            'min' => '100',
+            'max' => '1000',
+            "unit" => "px"
+        ));
+
+
+
+        $general_tab->createOption(array(
             'name' => __('Post Types', 'tinymce-comment-field'),
             'id' => 'post-types',
             'type' => 'multicheck',
@@ -137,7 +150,7 @@ class TMCECF_TitanController {
     }
 
     public static function save_editor_content_css() {
-        
+
         $css_url_dynamic = site_url() . "/?mcec_action=comment_editor_content_css";
 
         try {

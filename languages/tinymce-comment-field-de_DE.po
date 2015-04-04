@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TinyMCE Comment Field\n"
-"POT-Creation-Date: 2015-03-20 21:09+0100\n"
-"PO-Revision-Date: 2015-03-30 11:47+0100\n"
+"POT-Creation-Date: 2015-04-04 02:00+0100\n"
+"PO-Revision-Date: 2015-04-04 02:00+0100\n"
 "Last-Translator: Stefan Helmer <mail@eracer.de>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -292,51 +292,55 @@ msgid "Pick a color"
 msgstr "Wähle eine Farbe"
 
 #: controller/class-titan-controller.php:67
+msgid "Height"
+msgstr "Höhe"
+
+#: controller/class-titan-controller.php:80
 msgid "Post Types"
 msgstr "Post Types"
 
-#: controller/class-titan-controller.php:70
+#: controller/class-titan-controller.php:83
 msgid "Enable or Disable TinyMCE Comment Field on certain Post Types"
 msgstr ""
 "Aktiviere oder deaktiviere TinyMCE Comment Field bei bestimmen Post Types"
 
-#: controller/class-titan-controller.php:76
+#: controller/class-titan-controller.php:89
 msgid "Text Direction"
 msgstr "Textrichtung"
 
-#: controller/class-titan-controller.php:79
+#: controller/class-titan-controller.php:92
 msgid "Left to Right"
 msgstr "Links nach rechts"
 
-#: controller/class-titan-controller.php:80
+#: controller/class-titan-controller.php:93
 msgid "Right to Left"
 msgstr "Rechts nach Links"
 
-#: controller/class-titan-controller.php:83
+#: controller/class-titan-controller.php:96
 msgid "Set the Text Direction"
 msgstr "Festlegen der Textrichtung"
 
-#: controller/class-titan-controller.php:89
+#: controller/class-titan-controller.php:102
 msgid "Text below Comment Field"
 msgstr "Text unterhalb des Kommentar Felds"
 
-#: controller/class-titan-controller.php:92
+#: controller/class-titan-controller.php:105
 msgid "Put your text or html here"
 msgstr "Text oder HTML hie einfügen"
 
-#: controller/class-titan-controller.php:105
+#: controller/class-titan-controller.php:118
 msgid "Buttons"
 msgstr "Buttons"
 
-#: controller/class-titan-controller.php:108
+#: controller/class-titan-controller.php:121
 msgid "Enable or Disable Buttons on the Toolbar"
 msgstr "Aktiviere oder deaktiviere Buttons auf der Toolbar"
 
-#: controller/class-titan-controller.php:126
+#: controller/class-titan-controller.php:139
 msgid "Allowed Shortcodes"
 msgstr "Erlaubte Shortcodes"
 
-#: controller/class-titan-controller.php:129
+#: controller/class-titan-controller.php:142
 msgid "Enable or Disable Shortcodes for the Comment Field"
 msgstr "Aktiviere oder deaktiviere TinyMCE Comment Field"
 

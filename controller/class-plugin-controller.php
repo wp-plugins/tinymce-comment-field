@@ -6,6 +6,7 @@ class TMCECF_PluginController {
         new TMCECF_TitanController();
         new TMCECF_MetaBoxController();
         new TMCECF_EditorController();
+        new TMCECF_DummyController();
 
         add_action("init", array(&$this, "init"));
         add_filter("plugin_action_links_" . TMCECF_PLUGIN, array(&$this, "action_links"));

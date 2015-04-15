@@ -3,7 +3,7 @@
   Plugin Name: TinyMCE Comment Field - WYSIWYG
   Plugin URI: http://wordpress.org
   Description: This plugin turns the comment field from a primitive into a WYSIWYG editor, using the internal TinyMCE library bundled with WordPress.
-  Version: 0.6
+  Version: 0.7
   Author: Stefan Helmer
   Author URI: http://www.eracer.de
  */
@@ -21,5 +21,7 @@ require_once(TMCECF_PLUGIN_DIR . "controller/class-titan-controller.php");
 
 require_once(TMCECF_PLUGIN_DIR . "controller/class-metabox-controller.php");
 require_once(TMCECF_PLUGIN_DIR . "controller/class-editor-controller.php");
+require_once(TMCECF_PLUGIN_DIR . "controller/class-dummy-controller.php");
+
 
 new TMCECF_PluginController();

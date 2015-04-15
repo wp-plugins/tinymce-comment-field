@@ -4,7 +4,7 @@ Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id
 Tags: MCE, TinyMCE, Comment, Comments, Editor, Field, Visual, WYSIWYG, Image, Images
 Requires at least: 3.8
 Tested up to: 4.1.1
-Stable tag: 0.6
+Stable tag: 0.7
 License: GPLv2 or later
 
 This plugin switches the comment field from a poor one into a rich WYSIWYG editor, using the internal TinyMCE Editor bundled with WordPress.
@@ -13,11 +13,12 @@ This plugin switches the comment field from a poor one into a rich WYSIWYG edito
 
 This plugin switches the comment field from a poor one into a rich WYSIWYG editor, using the internal TinyMCE Editor bundled with WordPress.
 
-Additional Features:
-*   Full control: Enable or disable the TinyMCE comment-field on certain post-types, pages, posts or mobile devices
-*   Fully customizable: Font-style, font-layout, font-color, font-size, background-color
-*   Text direction: Left to right or right to left
-*   Enable or disable Shortcodes
+**Additional Features:**
+
+* **Full control** Enable or disable the TinyMCE comment-field on certain post-types, pages, posts or mobile devices
+* **Fully customizable** Font-style, font-layout, font-color, font-size, background-color
+* **Text direction** Left to right or right to left
+* Enable or disable Shortcodes
 
 == Installation ==
 

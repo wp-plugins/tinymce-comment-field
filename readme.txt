@@ -3,8 +3,8 @@ Contributors: rockschtar
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B2WSC5
 Tags: MCE, TinyMCE, Comment, Comments, Editor, Field, Visual, WYSIWYG, Image, Images
 Requires at least: 3.8
-Tested up to: 4.1.1
-Stable tag: 0.7
+Tested up to: 4.2
+Stable tag: 0.7.2
 License: GPLv2 or later
 
 This plugin switches the comment field from a poor one into a rich WYSIWYG editor, using the internal TinyMCE Editor bundled with WordPress.
@@ -35,4 +35,7 @@ This plugin switches the comment field from a poor one into a rich WYSIWYG edito
 5. Customized font, color and background
 
 == Changelog ==
+
+0.7.1 Added dummy options page when titan framework is not installed or activated to prevent confusion
+
 0.6 Added option to change the height of the editor

@@ -14,7 +14,7 @@ class TMCECF_PluginController {
         register_deactivation_hook(TMCECF_PLUGIN_FILE, array(&$this, "deactivate"));
         add_action('admin_notices', array(&$this, "check_compatibility"));
         add_action("admin_init", array(&$this, "handle_ignore_compatibility_issue"));
-        add_action('tgmpa_register', array(&$this, 'handle_required_plugins'));
+        add_action('tmcecf_register', array(&$this, 'handle_required_plugins'));
     }
 
     public function init() {
@@ -64,7 +64,7 @@ class TMCECF_PluginController {
         );
         $config = array(
             'default_path' => '', // Default absolute path to pre-packaged plugins.
-            'menu' => 'tgmpa-install-plugins', // Menu slug.
+            'menu' => 'tmcecf-install-plugins', // Menu slug.
             'has_notices' => true, // Show admin notices or not.
             'dismissable' => false, // If false, a user cannot dismiss the nag message.
             'dismiss_msg' => '', // If 'dismissable' is false, this message will be output at top of nag.
@@ -92,12 +92,12 @@ class TMCECF_PluginController {
             )
         );
 
-        tgmpa($plugins, $config);
+        tmcecf($plugins, $config);
     }
 
     public function activated($plugin) {
         if ($plugin === TMCECF_PLUGIN || $plugin === "titan-framework/titan-framework.php"):
-            TMCECF_TitanController::save_editor_content_css();   
+            TMCECF_TitanController::save_editor_content_css();
         endif;
     }
 

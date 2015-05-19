@@ -1,9 +1,9 @@
 <?php
 /*
   Plugin Name: TinyMCE Comment Field - WYSIWYG
-  Plugin URI: http://wordpress.org
+  Plugin URI: https://wordpress.org/plugins/tinymce-comment-field/
   Description: This plugin turns the comment field from a primitive into a WYSIWYG editor, using the internal TinyMCE library bundled with WordPress.
-  Version: 0.7
+  Version: 0.7.2
   Author: Stefan Helmer
   Author URI: http://www.eracer.de
  */

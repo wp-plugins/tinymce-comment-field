@@ -14,7 +14,7 @@ class TMCECF_DummyController {
     }
 
     public function dummy() {
-        
+        require_once(TMCECF_PLUGIN_DIR . "views/dummy.php");
     }
 
 }

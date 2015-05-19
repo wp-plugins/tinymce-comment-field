@@ -97,7 +97,7 @@ class TMCECF_PluginController {
 
     public function activated($plugin) {
         if ($plugin === TMCECF_PLUGIN || $plugin === "titan-framework/titan-framework.php"):
-            TMCECF_TitanController::save_editor_content_css();   
+            TMCECF_TitanController::save_editor_content_css();
         endif;
     }
 

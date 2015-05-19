@@ -151,7 +151,7 @@ class TMCECF_TitanController {
 
     public static function save_editor_content_css() {
 
-        $css_url_dynamic = site_url() . "/?mcec_action=comment_editor_content_css";
+        $css_url_dynamic = site_url() . "/?mcec_action=comment_editor_content_css&t=" . time();
 
         try {
             $wp_upload_dir = wp_upload_dir();
@@ -166,7 +166,7 @@ class TMCECF_TitanController {
             if ($result === false):
                 update_option("tinymce-comment-field_css-url", $css_url_dynamic);
             else:
-                update_option("tinymce-comment-field_css-url", $css_url);
+                update_option("tinymce-comment-field_css-url", $css_url . "?t=" . time());
             endif;
             update_option("tinymce-comment-field_css-path", $css_path);
         } catch (Exception $ex) {

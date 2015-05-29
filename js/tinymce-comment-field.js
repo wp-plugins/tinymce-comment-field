@@ -1,3 +1,13 @@
+jQuery.fn.tmcefBindFirst = function(name, fn) {
+    this.on(name, fn);
+
+    this.each(function() {
+        var handlers = jQuery._data(this, 'events')[name.split('.')[0]];
+        var handler = handlers.pop();
+        handlers.splice(0, 0, handler);
+    });
+};
+
 jQuery(function ($) {
 
     $('.comment-reply-link').click(function (e) {
@@ -17,4 +27,7 @@ jQuery(function ($) {
         }, 500);
     });
 
+    $("#commentform").tmcefBindFirst( 'submit', function() {
+        $("#comment").val(tinymce.activeEditor.getContent());
+    });
 });

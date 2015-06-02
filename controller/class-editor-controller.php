@@ -191,7 +191,11 @@ class TMCECF_EditorController {
         if (!class_exists('TitanFramework')):
             return;
         endif;
-        
+
+	    if(current_user_can("publish_posts")) {
+		    return;
+	    }
+
         global $shortcode_tags;
         $titan = TitanFramework::getInstance('tinymce-comment-field');
         $allowed_shortcodes = $titan->getOption('allowed-shortcodes');

@@ -28,6 +28,8 @@ jQuery(function ($) {
     });
 
     $("#commentform").tmcefBindFirst( 'submit', function() {
-        $("#comment").val(tinymce.activeEditor.getContent());
+        if($("#comment").length > 0) {
+            $("#comment").val(tinymce.activeEditor.getContent());
+        }
     });
 });

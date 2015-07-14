@@ -9,7 +9,13 @@ class TMCECF_EditorController {
         add_action('wp_enqueue_scripts', array(&$this, 'comment_editor_scripts'));
         add_filter("comment_reply_link", array(&$this, 'comment_reply_link_fix'));
         add_action("template_redirect", array(&$this, "comment_editor_content_css"));
-        add_filter('comments_template', array(&$this, "shortcodes_whitelist"));
+        add_filter('comments_template', array(&$this, "shortcodes_whitelist"), 10);
+        add_filter('dynamic_sidebar', array(&$this, "reset_shortcodes"));
+        add_filter('widget_execphp', 'do_shortcode');
+    }
+
+    public function testo($x) {
+        return $x;
     }
 
     public function comment_editor($default) {
@@ -38,15 +44,7 @@ class TMCECF_EditorController {
         endforeach;
 
         ob_start();
-        wp_editor('', 'comment', array(
-            'textarea_rows' => 15,
-            'teeny' => true,
-            'quicktags' => false,
-            'media_buttons' => false,
-            'tinymce' => array(
-                 'height' => $height,
-                'directionality' => $text_direction, 'content_css' => $content_css)
-        ));
+        wp_editor('', 'comment', array('textarea_rows' => 15, 'teeny' => true, 'quicktags' => false, 'media_buttons' => false, 'tinymce' => array('height' => $height, 'directionality' => $text_direction, 'content_css' => $content_css)));
         $comment_editor = ob_get_contents();
         ob_end_clean();
         $comment_editor = str_replace('post_id=0', 'post_id=' . get_the_ID(), $comment_editor);
@@ -171,15 +169,15 @@ class TMCECF_EditorController {
 
                 header('Content-type: text/css')
                 ?>
-                body { 
+                body {
                 <?php
                 foreach ($editor_font as $key => $css):
                     echo $key . " : " . $css . ";" . chr(13);
                 endforeach;
                 ?>
                 background-color: <?php echo $background_color; ?>;
-                }            
-                <?php
+                }
+            <?php
             endif;
 
             exit();
@@ -192,11 +190,10 @@ class TMCECF_EditorController {
             return;
         endif;
 
-	    if(current_user_can("publish_posts")) {
-		    return;
-	    }
-
         global $shortcode_tags;
+        global $shortcode_tags_saved;
+        $shortcode_tags_saved = $shortcode_tags;
+
         $titan = TitanFramework::getInstance('tinymce-comment-field');
         $allowed_shortcodes = $titan->getOption('allowed-shortcodes');
 
@@ -212,7 +209,15 @@ class TMCECF_EditorController {
                 remove_shortcode($shortcode_tag);
             endif;
         endforeach;
+
         add_filter('comment_text', 'do_shortcode');
+    }
+
+    public function reset_shortcodes($text) {
+        global $shortcode_tags;
+        global $shortcode_tags_saved;
+        $shortcode_tags = $shortcode_tags_saved;
+        return $text;
     }
 
 }

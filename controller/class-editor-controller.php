@@ -213,11 +213,13 @@ class TMCECF_EditorController {
         add_filter('comment_text', 'do_shortcode');
     }
 
-    public function reset_shortcodes($text) {
+    public function reset_shortcodes() {
         global $shortcode_tags;
         global $shortcode_tags_saved;
-        $shortcode_tags = $shortcode_tags_saved;
-        return $text;
+
+        if(!empty($shortcode_tags_saved)) {
+            $shortcode_tags = $shortcode_tags_saved;
+        }
     }
 
 }

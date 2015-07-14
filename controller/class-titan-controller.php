@@ -3,8 +3,13 @@
 class TMCECF_TitanController {
 
     public function __construct() {
+        add_action( 'tf_admin_page_start', array(&$this, "buy_me_a_coffee"));
         add_action('tf_create_options', array(&$this, "create_options"));
         add_action("tf_admin_options_saved_tinymce-comment-field", array(&$this, "save_editor_content_css"));
+    }
+
+    public function buy_me_a_coffee() {
+
     }
 
     public function create_options() {
@@ -73,8 +78,6 @@ class TMCECF_TitanController {
             'max' => '1000',
             "unit" => "px"
         ));
-
-
 
         $general_tab->createOption(array(
             'name' => __('Post Types', 'tinymce-comment-field'),

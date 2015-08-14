@@ -20,7 +20,7 @@ class TMCECF_Buttons {
             "redo" => __("Redo", "tinymce-comment-field"),
             "link" => __("Add Link", "tinymce-comment-field"),
             "unlink" => __("Remove Link", "tinymce-comment-field"),
-            "image" => __("Image", "tinymce-comment-field"),            
+            //"image" => __("Image", "tinymce-comment-field"),
             "removeformat" => __("Remove Format", "tinymce-comment-field"),
             "formatselect" => __("Format Select", "tinymce-comment-field"),
             "fontselect" => __("Font Select", "tinymce-comment-field"),

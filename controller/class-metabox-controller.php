@@ -1,5 +1,5 @@
 <?php
-class TMCECF_MetaBoxController {
+class TMCECF_MetaBoxController extends TMCECF_BaseController {
 
     public function __construct() {
         add_action('add_meta_boxes', array(&$this, "add_meta_boxes"));
@@ -7,7 +7,7 @@ class TMCECF_MetaBoxController {
     }
 
     public function add_meta_boxes() {
-        if (class_exists('TitanFramework')):
+        if ($this->isTitanEnabled()):
             $titan = TitanFramework::getInstance('tinymce-comment-field');
             $post_types = $titan->getOption('post-types');
 

@@ -3,7 +3,6 @@
 class TMCECF_TitanController {
 
     public function __construct() {
-        add_action('tf_admin_page_start', array(&$this, "buy_me_a_coffee"));
         add_action('tf_create_options', array(&$this, "create_options"));
         add_action("tf_admin_options_saved_tinymce-comment-field", array(&$this, "save_editor_content_css"));
     }
